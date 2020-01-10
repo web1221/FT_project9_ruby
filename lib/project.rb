@@ -41,4 +41,9 @@ end
     end
   end
 
+  def update(title)
+    @title = title
+    DB.exec("UPDATE project SET title = '#{@title}' WHERE id = #{id};")
+  end
+
 end
