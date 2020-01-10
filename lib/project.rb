@@ -14,4 +14,8 @@ class Project
     end
   end
 
+  def self.all
+
+  end
+
 end
