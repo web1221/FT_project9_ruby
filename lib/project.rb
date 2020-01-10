@@ -46,4 +46,9 @@ end
     DB.exec("UPDATE project SET title = '#{@title}' WHERE id = #{id};")
   end
 
+  def delete()
+    DB.exec("DELETE FROM project WHERE id = #{@id};")
+    DB.exec("DELETE FROM volunteers WHERE project_id = #{@id};")
+  end
+
 end
