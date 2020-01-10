@@ -6,6 +6,6 @@ class Project
     @id = attributes.fetch(:id)
   end
 
-  
+
 
 end
