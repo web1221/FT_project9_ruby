@@ -28,3 +28,37 @@ get('/projects/new') do
   @projects = Project.all
   erb(:new_project)
 end
+
+get('/projects/:id') do
+  @project = Project.find(params[:id].to_i())
+  if @project == nil
+    erb(:go_back)
+  else
+    erb(:project)
+  end
+end
+
+post('/projects/:id/volunteers') do
+  @project = Project.find(params[:id].to_i())
+  volunteer = Volunteer.new({:name => params[:name_input], :project_id => @project.id, :id => nil})
+  volunteer.save()
+  erb(:project)
+end
+
+get('/projects/:id/edit') do
+  @project = Project.find(params[:id].to_i())
+  erb(:edit_project)
+end
+
+patch('/projects/:id') do
+  @project = Project.find(params[:id].to_i())
+  @project.update(params[:title_input])
+  @projects = Project.all
+  erb(:project)
+end
+
+delete('/projects/:id') do
+  @project = Project.find(params[:id].to_i())
+  @project.delete()
+  redirect to('/projects')
+end

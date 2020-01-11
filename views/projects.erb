@@ -1,3 +1,13 @@
+<h1>Add a new project</h1>
+
+<form action="/projects" method="post">
+<div class="form-group">
+  <label for="title_input">Project Title</label>
+  <input name="title_input" class="form-control" type="text" required>
+</div>
+<button type="submit" class="btn btn-primary">Create Project</button>
+</form>
+
 <h3><center>Available Projects</center></h3>
 <% if @projects.any? %>
 <ul>
@@ -8,5 +18,3 @@
   <% else %>
   <p>There are currently no projects to display.</p>
   <% end %>
-
-  <p><a href="/projects/new">Add a new Project</a></p>
