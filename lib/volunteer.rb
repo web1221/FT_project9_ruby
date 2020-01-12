@@ -55,4 +55,8 @@ class Volunteer
     end
     volunteers
   end
+
+  def projects
+    Project.find(@project_id)
+  end
 end
