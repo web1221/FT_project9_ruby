@@ -27,6 +27,11 @@ class Volunteer
     volunteers
   end
 
+  def update(name, project_id)
+    @name = name
+    @project_id = project_id
+    DB.exec("UPDATE volunteers SET name = '#{@name}', project_id = #{@project_id} WHERE id = #{@id};")
+  end
 
   def save
     result = DB.exec("INSERT INTO volunteers (name, project_id) VALUES ('#{@name}', '#{@project_id}') RETURNING id;")

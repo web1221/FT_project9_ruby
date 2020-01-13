@@ -67,6 +67,8 @@ describe Volunteer do
 
   describe('#update') do
   it("updates a volunteer by id") do
+    @project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
+    @project.save
     volunteer = Volunteer.new({:name =>"Jane", :project_id => @project.id, :id => nil})
     volunteer.save()
     volunteer.update("Wendy", @project.id)
