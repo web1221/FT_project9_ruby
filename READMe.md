@@ -31,6 +31,7 @@ _This application was built using __Ruby__._
 * __Pry__ was used for debugging
 * __CSS__ was used for styling
 * __Postgres__ was used for the database
+* __Rake__ was used for the dump and build database
 
 ### License
 
