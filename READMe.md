@@ -12,6 +12,7 @@
 * Copy link from github
 * Open terminal and __git clone__ link
 * __cd__ into project and if you have bundler installed you can run __bundle install__ to install gems
+* In the terminal run __rake[volunteer_tracker]__ to create database
 * run __ruby app.rb__ to open localhost:4567 to view webpage
 
 ## Known Bugs
@@ -30,6 +31,7 @@ _This application was built using __Ruby__._
 * __Pry__ was used for debugging
 * __CSS__ was used for styling
 * __Postgres__ was used for the database
+* __Rake__ was used for the dump and build database
 
 ### License
 
